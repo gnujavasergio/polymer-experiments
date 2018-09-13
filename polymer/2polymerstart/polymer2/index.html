@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./bower_components/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+    <script src="./bower_components/webcomponentsjs/webcomponents-loader.js"></script>    
+    <link rel="import" href="./componente-basico.html">
+</head>
+
+<body>
+    <h1>Polymer 2</h1>
+    <componente-polymer></componente-polymer>
+    <componente-polymer></componente-polymer>
+    
+    <componente-basico></componente-basico>
+
+    <template id="contenido">
+        <style>
+            h1 {
+                color: red;
+            }
+        </style>
+        <h1>Componente</h1>
+        <p>este es un parrafo</p>
+    </template>
+    
+    <script>
+        // Define la clase con alque implemento el componente
+        class ComponentePolymer extends Polymer.Element {
+            
+            static get template(){
+                return document.getElementById('contenido');
+            }
+
+        }
+
+        // Asocio la clase a un nombre del componente
+        customElements.define('componente-polymer', ComponentePolymer);
+    </script>
+</body>
+
+</html>

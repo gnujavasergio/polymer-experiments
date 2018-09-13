@@ -1,0 +1,24 @@
+{
+  "name": "polymer2",
+  "authors": [
+    "Sergio Antonio Ochoa Martinez <gnu.java.sergio@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "keywords": [
+    "polymer2"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.6.0",
+    "iron-collapse": "PolymerElements/iron-collapse#^2.2.1"
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hola</h1>
+    <componente-tonto></componente-tonto>
+    <componente-tonto></componente-tonto>
+
+    <template id="contenido">
+        <style>
+            h1 {
+                color: red;
+            }
+        </style>
+        <h1>Componente</h1>
+        <p>Hola desde el Componente</p>
+    </template>
+    
+    <script>
+        // Define la clase con alque implemento el componente
+        class ComponenteTonto extends HTMLElement {
+            constructor() {
+                super();
+                console.log('hola mundo');
+                var contenido = document.getElementById('contenido');
+                // this.attachShadow({mode:'open'}).innerHTML = '<p>Este es el <b>componente</b></p>';
+                this.attachShadow({ mode: 'open' }).innerHTML = contenido.innerHTML;
+            }
+        }
+
+        // Asocio la clase a un nombre del componente
+        customElements.define('componente-tonto', ComponenteTonto);
+    </script>
+</body>
+
+</html>

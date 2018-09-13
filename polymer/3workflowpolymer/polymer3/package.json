@@ -1,0 +1,15 @@
+{
+  "name": "polymer3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sergio Antonio Ochoa Martinez <gnu.java.sergio@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@polymer/polymer": "^3.0.5",
+    "@webcomponents/webcomponentsjs": "latest"
+  }
+}

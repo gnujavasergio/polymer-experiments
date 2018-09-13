@@ -1,0 +1,19 @@
+{
+    "instrumentos":[
+        {
+            "nombre": "Flauta",
+            "clasificacion": "Viento",
+            "descripcion": "Instrumento Musical de cuerda Viernto"
+        },
+        {
+            "nombre": "Violin",
+            "clasificacion": "Cuerda",
+            "descripcion": "Instrumento Musical de Cuerda"
+        },
+        {
+            "nombre": "Chelo",
+            "clasificacion": "Cuerda",
+            "descripcion": "Instrumento Musical de Cuerda"
+        }
+    ]
+}

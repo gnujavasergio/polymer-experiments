@@ -1,0 +1,15 @@
+{
+  "name": "polymer2",
+  "authors": [
+    "Sergio Antonio Ochoa Martinez <gnu.java.sergio@gmail.com>"
+  ],
+  "description": "Componente Basico",
+  "main": "index.html",
+  "keywords": [
+    "polymer"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0"
+  }
+}
