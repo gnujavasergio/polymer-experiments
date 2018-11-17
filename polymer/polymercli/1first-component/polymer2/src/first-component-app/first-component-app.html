@@ -1,0 +1,45 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../componente-basico/componente-basico.html">
+<link rel="import" href="../encuesta/encuesta-option.html">
+<dom-module id="first-component-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+    <componente-basico id="basico"></componente-basico>
+    <button  on-click="change">Cambiar Propiedad</button>
+    <button on-click="changeComponent">Cambiar Propiedad desde Componente</button>
+    <encuesta-option respuesta="Java es el mejor lenguaje de programación" marcado></encuesta-option>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class FirstComponentApp extends Polymer.Element {
+      static get is() { return 'first-component-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'first-component-app'
+          }
+        };
+      }
+
+      change(){
+        this.$.basico.name = "cambiando nombre desde el padre";
+      }
+
+      changeComponent(){
+        this.$.basico.change('Cambiando nombre desde el hijo');
+      }
+    }
+
+    window.customElements.define(FirstComponentApp.is, FirstComponentApp);
+  </script>
+</dom-module>

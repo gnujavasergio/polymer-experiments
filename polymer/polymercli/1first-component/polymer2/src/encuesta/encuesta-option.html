@@ -1,0 +1,35 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-if.html">
+<dom-module id="encuesta-option">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+        </style>
+        <p>[[respuesta]]</p>
+        <template is="dom-if" if="[[marcado]]">
+            Eso es verdad
+        </template>
+        <p>[[marcada]]</p>
+    </template>
+    <script>
+        class EncuestaOption extends Polymer.Element {
+            static get is() {
+                return 'encuesta-option';
+            }
+
+            static get properties() {
+                return {
+                    respuesta: String,
+                    marcado: {
+                        type: Boolean,
+                        value: false
+                    }
+                }
+            }
+        }
+
+        window.customElements.define(EncuestaOption.is, EncuestaOption)
+    </script>
+</dom-module>

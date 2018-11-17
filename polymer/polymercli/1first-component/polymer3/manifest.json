@@ -1,0 +1,6 @@
+{
+  "name": "firstcomponent",
+  "short_name": "firstcomponent",
+  "start_url": "/",
+  "display": "standalone"
+}
